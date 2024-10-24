@@ -1,0 +1,170 @@
+/* Định nghĩa các thuộc tính toàn cục cho trang web */
+:root {
+    /* Giao diện Mặc Định */
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg-color: rgb(189, 189, 189);
+    --header-text-color: #000;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+}
+.gioithieu{
+  display:flex;
+  top:auto;
+  right: auto;
+  position:absolute;
+  gap: 20px;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+}
+.gioithieu1{
+  z-index: 2;
+  border-radius: 8px; /* Bo góc cho các box để tạo các góc tròn */
+  padding: 20px; /* Thêm khoảng cách xung quanh nội dung bên trong box */
+  flex: 1; /* Cho phép các box mở rộng để chiếm không gian còn lại */
+  min-width: 150px; /* Đặt chiều rộng tối thiểu cho mỗi box */
+  max-width: 220px; /* Đặt chiều rộng tối đa cho mỗi box */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng rõ hơn cho các box để tạo hiệu ứng nổi bật */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho transform, box-shadow và background-color khi hover */
+  text-align: center; /* Căn giữa nội dung văn bản trong box */
+  text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+  color: #fff; /* Màu chữ trắng để nổi bật trên nền tối của các box */
+  font-weight: bold; /* Chữ đậm hơn để dễ đọc hơn */
+  font-size: 16px; /* Kích thước chữ lớn hơn một chút để dễ đọc hơn */
+}
+.gioithieu1:hover{
+  transform: scale(1.1); /* Tăng kích thước của box lên 5% khi hover để tạo hiệu ứng phóng to */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ bóng của box khi hover để tạo hiệu ứng nổi bật hơn */
+  
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Xác định kiểu chữ cho toàn bộ trang */
+    margin: 0; /* Loại bỏ khoảng cách mặc định xung quanh body */
+    padding: 0; /* Loại bỏ khoảng cách bên trong body */
+    box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng và chiều cao của phần tử */
+    background-color: #f0f0f0; /* Màu nền nhạt để làm nổi bật các phần tử */
+}
+
+/* Định dạng phần header của trang web */
+/* Styles cho phần header */
+header {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ZQYh3R2bQ1IUJr1EdC6it9Ee7i90a8dHdg&s');
+  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ chiều rộng */
+  background-position: center; /* Đặt vị trí trung tâm của hình ảnh */
+  background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+  text-align: center;
+  height: 100vh;
+  box-shadow: 0 8px 10px rgb(127, 127, 127); /* Bóng đổ tinh tế */
+}
+
+header h1 {
+  color: #A52A2A;
+  font-size: 120px;
+  letter-spacing: 10px; /* khoảng cách giữa các chữ */
+  text-transform: uppercase; /* Chữ in hoa để tạo sự mạnh mẽ */
+  margin: 0;
+  padding-top: 200px; /* Điều chỉnh khoảng cách giữa text và cạnh trên của header */
+  font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal; /* font chữ từ Google Fonts */
+  animation: changeColor 5s infinite;
+}
+
+
+/* Thêm hiệu ứng khi người dùng di chuột vào tên */
+header h1:hover {
+  transform: scale(1.09);
+    transition: color 0.5s ease;
+}
+
+
+/* Định dạng phần nội dung chính của trang */
+main {
+    padding: 30px; /* Thêm khoảng cách xung quanh nội dung trong main */
+    display: flex; /* Sử dụng Flexbox để bố trí các phần tử con */
+    justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+    flex-wrap: wrap; /* Cho phép các phần tử con xuống hàng nếu không còn chỗ */
+    gap: 20px; /* Khoảng cách giữa các box */
+}
+
+/* Định dạng cho các phần tử box trong main */
+.thongtincanhan{
+  display:flex;
+  padding: 20px;
+  gap: 10px;
+}
+.box {
+    z-index: 2;
+    border-radius: 8px; /* Bo góc cho các box để tạo các góc tròn */
+    padding: 20px; /* Thêm khoảng cách xung quanh nội dung bên trong box */
+    flex: 1; /* Cho phép các box mở rộng để chiếm không gian còn lại */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu cho mỗi box */
+    max-width: 170px; /* Đặt chiều rộng tối đa cho mỗi box */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng rõ hơn cho các box để tạo hiệu ứng nổi bật */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho transform, box-shadow và background-color khi hover */
+    text-align: center; /* Căn giữa nội dung văn bản trong box */
+    text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+    color: #fff; /* Màu chữ trắng để nổi bật trên nền tối của các box */
+    font-weight: bold; /* Chữ đậm hơn để dễ đọc hơn */
+    font-size: 16px; /* Kích thước chữ lớn hơn một chút để dễ đọc hơn */
+}
+
+/* Hiệu ứng khi hover vào các box */
+.box:hover {
+    transform: scale(1.05); /* Tăng kích thước của box lên 5% khi hover để tạo hiệu ứng phóng to */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ bóng của box khi hover để tạo hiệu ứng nổi bật hơn */
+}
+
+/* Định dạng phần footer của trang web */
+.container {
+    background-color: #F1DEBC;
+    padding: 40px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: relative; /* To create a stacking context */
+    z-index: 1; /* Layer it under the social boxes */
+}   
+footer {
+    background-color: #333; /* Màu nền tối cho footer */
+    color: #fff; /* Màu chữ trắng để nổi bật trên nền tối */
+    text-align: center; /* Căn giữa nội dung văn bản trong footer */
+    padding: 5px; /* Thêm khoảng cách xung quanh nội dung trong footer */
+    width: 100%; /* Đảm bảo footer chiếm toàn bộ chiều rộng của trang */
+    bottom: 0; /* Đặt footer ở dưới cùng của trang */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ cho footer để tạo hiệu ứng nổi bật */
+}
+p{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.avatar {
+  position: absolute; /* Đặt vị trí tuyệt đối để di chuyển đến góc */
+  top: 20px; /* Khoảng cách từ trên xuống */
+  right: 5px; /* Khoảng cách từ bên phải */
+  width: 15%; /* Chiều rộng của avatar */
+  border-radius: 50%; /* Bo tròn cho avatar */
+  z-index: 1; /* Đặt lên trên các phần tử khác */
+}
+.avatar:hover{
+  transform: scale(1.1); /* Phóng to 10% khi hover */
+  transition: transform 0.5s ease;
+  
+}
+.avatar img{
+    width: 60%;
+    border-radius: 50%
+    
+}
+
+
+
+
+
+
+
+
+
+
